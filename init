@@ -1,0 +1,8 @@
+#!/busybox sh
+/busybox mkdir -p bin proc sys dev tmp
+/busybox mount -t proc proc /proc
+/busybox mount -t sysfs sysfs /sys
+/busybox --install -s /bin
+mdev -s
+echo "Init done, invoking shell"
+exec getty -n -l /bin/sh -L ttyS0 115200 vt100
