@@ -13,5 +13,5 @@ qemu-system-x86_64 \
     -kernel ~/app/linux-5.6.3/arch/x86/boot/bzImage \
     -initrd initrd.cpio \
     -nographic \
-    -append "debug rw"
+    -append "debug rw console=ttyS0"
 #    -bios /usr/share/ovmf/OVMF.fd \
